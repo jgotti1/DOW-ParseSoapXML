@@ -23,7 +23,7 @@ const sampleResponse = `<?xml version="1.0" encoding="UTF-8"?>
 </soap:Envelope>`;
 // --------------------------------------------------------------------
 
-const xml2js = require("xml2js"); //required npm package
+const xml2js = require("xml2js"); 
 const parser = new xml2js.Parser({ explicitArray: false, ignoreAttrs: true });
 
 
@@ -46,7 +46,7 @@ const xmlParse = async (xmlData) => {
           if (item.includes("-")) {
             adbaseIDs.push(item);
           } else {
-            e2IDs.push(parseInt(item, 10)); // Assuming decimal numbers
+            e2IDs.push(item); 
           }
         });
 
@@ -64,7 +64,7 @@ const xmlParse = async (xmlData) => {
 };
 
 
-// Run the function and console.log the result after the PArse is complete 
+// Run the function and console.log the result after the Parse is complete 
 (async () => {
   try {
     const result = await xmlParse(sampleResponse);
