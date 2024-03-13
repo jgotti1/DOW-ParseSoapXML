@@ -16,6 +16,6 @@ The utility processes the XML and returns a single JavaScript object structured 
 {
   AdBaseIDs: [/* array of strings */],
   E2IDs: [/* array of numbers */],
-  SRList: [/* array of strings */]
+  SRList: [/* array of snumbers */]
 }
 

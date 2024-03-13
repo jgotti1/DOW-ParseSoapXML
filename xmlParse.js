@@ -9,8 +9,8 @@ const sampleResponse = `<?xml version="1.0" encoding="UTF-8"?>
 <srList soapenc:arrayType="xsd:string[2]" xsi:type="soapenc:Array">
 <string xsi:type="xsd:string"/>
 <string xsi:type="xsd:string"/>
-<string xsi:type="xsd:string">srList555555</string>
-<string xsi:type="xsd:string">srList1234567</string>
+<string xsi:type="xsd:string">555555</string>
+<string xsi:type="xsd:string">1234567</string>
 </srList>
 <contentList soapenc:arrayType="xsd:int[2]" xsi:type="soapenc:Array">
 <string xsi:type="xsd:int">205906335</string>
@@ -46,14 +46,14 @@ const xmlParse = async (xmlData) => {
           if (item.includes("-")) {
             adbaseIDs.push(item);
           } else {
-            e2IDs.push(item); 
+            e2IDs.push(parseInt(item));  
           }
         });
 
         // Process srList
         srList.forEach((item) => {
           if (item.trim() !== "") {
-            srIds.push(item);
+            srIds.push(parseInt(item));
           }
         });
 
